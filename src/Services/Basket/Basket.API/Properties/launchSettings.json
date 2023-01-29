@@ -9,19 +9,11 @@
     }
   },
   "profiles": {
-    "http": {
+    "Basket.API": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "http://localhost:5106",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "IIS Express": {
-      "commandName": "IISExpress",
-      "launchBrowser": true,
-      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:5001",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

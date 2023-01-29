@@ -5,15 +5,15 @@ using MongoDB.Driver;
 
 namespace Catalog.API.Repositories
 {
-	public class ProductRepository:IProductRepository
-	{
+    public class ProductRepository : IProductRepository
+    {
         private readonly ICatalogContext _context;
 
         public ProductRepository(ICatalogContext context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
-    
+
         public async Task<Product> GetProduct(string id)
         {
             return await _context.Products.Find(c => c.Id == id).FirstOrDefaultAsync();
@@ -36,12 +36,12 @@ namespace Catalog.API.Repositories
 
         public async Task<IEnumerable<Product>> GetProducts()
         {
-           return await _context.Products.Find(c=>true).ToListAsync();
+            return await _context.Products.Find(c => true).ToListAsync();
         }
 
         public async Task CreateProduct(Product product)
         {
-             await _context.Products.InsertOneAsync(product);
+            await _context.Products.InsertOneAsync(product);
         }
 
         public async Task<bool> DeleteProduct(string id)

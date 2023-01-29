@@ -6,10 +6,26 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="7.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Controllers\" />
+    <None Remove="Entities\" />
+    <None Remove="Microsoft.Extensions.Caching.StackExchangeRedis" />
+    <None Remove="Repositories\" />
+    <None Remove="Newtonsoft.Json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
 </Project>
