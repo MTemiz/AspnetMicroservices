@@ -9,6 +9,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="Npgsql" Version="7.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Dapper" />
+    <None Remove="Npgsql" />
+  </ItemGroup>
 </Project>
