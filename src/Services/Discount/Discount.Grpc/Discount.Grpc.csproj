@@ -5,6 +5,9 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 	</PropertyGroup>
+	<PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+	  <ExternalConsole>true</ExternalConsole>
+	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Dapper" Version="2.0.123" />
 		<PackageReference Include="Npgsql" Version="7.0.2" />
@@ -25,6 +28,7 @@
 		<None Remove="Protos\discount.proto" />
 		<None Remove="Grpc.AspNetCore" />
 		<None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+		<None Remove="Mapper\" />
 	</ItemGroup>
 	<ItemGroup>
 		<Folder Include="Entities\" />
@@ -32,6 +36,7 @@
 		<Folder Include="Extensions\" />
 		<Folder Include="Services\" />
 		<Folder Include="Protos\" />
+		<Folder Include="Mapper\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Protobuf Include="Protos\discount.proto" GrpcServices="Server">
