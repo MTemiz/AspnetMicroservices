@@ -22,6 +22,7 @@
     <None Remove="Features\Orders\Queries\" />
     <None Remove="Features\Orders\Queries\GetOrdersList\" />
     <None Remove="Features\Orders\Commands\CheckoutOrder\" />
+    <None Remove="Features\Orders\Commands\UpdateOrder\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contracts\" />
@@ -36,6 +37,7 @@
     <Folder Include="Features\Orders\Queries\" />
     <Folder Include="Features\Orders\Queries\GetOrdersList\" />
     <Folder Include="Features\Orders\Commands\CheckoutOrder\" />
+    <Folder Include="Features\Orders\Commands\UpdateOrder\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
