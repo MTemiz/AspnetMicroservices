@@ -1,5 +1,4 @@
-﻿using System;
-using AutoMapper;
+﻿using AutoMapper;
 using Discount.Gprc.Repositories;
 using Discount.Grpc.Entities;
 using Discount.Grpc.Protos;

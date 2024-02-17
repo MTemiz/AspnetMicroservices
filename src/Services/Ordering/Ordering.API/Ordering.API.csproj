@@ -9,8 +9,20 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.9">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Controllers\" />
+    <None Remove="Extensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Extensions\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ordering.Application\Ordering.Application.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
