@@ -27,7 +27,14 @@ namespace Ordering.Infrastructure.Persistence
                     EmailAddress="mt3miz@gmail.com",
                     AddressLine="Erbaa",
                     Country="Turkey",
-                    TotalPrice=350
+                    TotalPrice=350,
+                     CardName = string.Empty,
+                      CardNumber = string.Empty,
+                       CVV =  string.Empty,
+                        LastModifiedBy = string.Empty,
+                         State = string.Empty,
+                         ZipCode = string.Empty,
+                          Expiration = string.Empty
                 }
             };
         }

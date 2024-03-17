@@ -19,11 +19,11 @@ namespace Ordering.Infrastructure
                 options.UseSqlServer(configuration.GetConnectionString("OrderingConnectionString"));
             });
 
-            //services.AddScoped(typeof(IAsyncRepository<>), typeof(RepositoryBase<>));
-            //services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped(typeof(IAsyncRepository<>), typeof(RepositoryBase<>));
+            services.AddScoped<IOrderRepository, OrderRepository>();
 
-            //services.Configure<EmailSettings>(c => configuration.GetSection("EmailSettings"));
-            //services.AddTransient<IEmailService, EmailService>();
+            services.Configure<EmailSettings>(c => configuration.GetSection("EmailSettings"));
+            services.AddTransient<IEmailService, EmailService>();
 
             return services;
         }
